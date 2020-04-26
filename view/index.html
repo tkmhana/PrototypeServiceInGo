@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Go/Gin</title>
+    <style type="text/css" media="screen">
+      @import url("/assets/css/style.css");
+    </style>
+  </head>
+  <body>
+    <h1>Hello Gin, say anythig!</h1>
+    <form action="/add" method="post">
+      <!--
+      <p>
+        Name：<br>
+        <input type="text" name="name" size="40">
+      </p>
+      <p>
+        Age：<br>
+        <select name="age">
+          <option value="0">0 ~ 9</option>
+          <option value="10">1 ~ 19</option>
+          <option value="20">20 ~ 29</option>
+          <option value="30">30 ~ 39</option>
+        </select>
+      </p>
+      -->
+
+      <p><a href="/signup">新規登録</a></p>
+      <p><a href="/signin">ログインページ</a></p>
+      
+      <p>
+        What you think：<br>
+        <textarea class="form" name="content" rows="" cols=""></textarea>
+        </p>
+      <p>
+        <input type="submit" value="送信">
+        <input type="reset" value="リセット">
+      </p>
+    </form>
+    <h1 class="border-top">Texts you posted</h1>
+    <ul>
+      {{ range .tweet }}
+          <li>{{.Content}}</li>
+      {{ end }}
+  </ul>
+  </body>
+</html>

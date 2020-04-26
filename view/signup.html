@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Go/Gin</title>
+    <style type="text/css" media="screen">
+      @import url("/assets/css/style.css");
+    </style>
+  </head>
+  <body>
+    <p>{{.err}}</p>
+    <div class="">
+      <form class="" method="POST" action="/signup" onsubmit="DisableButton();">
+        <h2 class="">新規登録</h2>
+        <p>
+        メールアドレス
+          <input name="username" type="text" class="form-control" placeholder="Email address" required> 
+        </p>
+        <p>
+        パスワード
+          <input name="password" type="password" class="form-control" placeholder="Password" required>
+        </p>
+        <br>
+        <button id="submitbutton" class="" type="submit">登録</button>
+      </form>
+    </div>
+  </body>
+</html>
